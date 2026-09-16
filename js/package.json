@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "@lowseekai/flarum-raffle-ticket",
+  "devDependencies": {
+    "flarum-webpack-config": "^2.0.0",
+    "javascript-obfuscator": "^4.0.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-obfuscator": "^3.5.1"
+  },
+  "scripts": {
+    "dev": "webpack --mode development --watch",
+    "build": "webpack --mode production"
+  }
+}

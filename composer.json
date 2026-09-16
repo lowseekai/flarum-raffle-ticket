@@ -1,0 +1,44 @@
+{
+    "name": "lowseekai/flarum-raffle-ticket",
+    "description": "Point-based raffle tickets for Flarum 2.",
+    "type": "flarum-extension",
+    "license": "proprietary",
+    "require": {
+        "flarum/core": "^2.0.0-rc.8",
+        "ramon/point-system": "dev-main"
+    },
+    "support": {
+        "issues": "https://github.com/lowseekai/flarum-raffle-ticket/issues",
+        "source": "https://github.com/lowseekai/flarum-raffle-ticket"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Ziven\\GuaGuaLe\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ziven"
+        }
+    ],
+    "extra": {
+        "flarum-extension": {
+            "title": "Ziven Raffle Ticket",
+            "id": "ziven-guaguale",
+            "icon": {
+                "name": "fas fa-ticket-alt",
+                "backgroundColor": "#68238c",
+                "color": "#fff"
+            }
+        }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/lowseekai/point-system.git",
+            "no-api": true
+        }
+    ]
+}

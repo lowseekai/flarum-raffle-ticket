@@ -1,0 +1,129 @@
+.GuaGuaLeGlobalContainer{
+  width: 100%; 
+  padding-top: 30px;
+  position: relative;
+}
+
+@media @phone {
+  .GuaGuaLeGlobalContainer{
+    padding-top:15px;
+  }
+}
+
+.GuaGuaLeViewHistoryContainer{
+  padding-bottom:10px;
+}
+
+.guagualeHistoryContainer{
+  border: 1px dotted var(--control-color);
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.GuaGuaLeContainer {
+  cursor: pointer;
+  height:150px;
+  border-radius: 4px;
+  color: #ddd;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-user-select: none;
+  -ms-user-select: none; 
+  user-select: none; 
+}
+
+.GuaGuaLeMask {
+  border-radius: 4px;
+  padding:1em;
+  position:relative;
+}
+
+.GuaGuaLeContainer:after {
+    opacity: 0.2;
+}
+
+.GuaGuaLeTitle {
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.GuaGuaLeDescription {
+  height: 60px;
+  overflow-y: auto;
+}
+
+.GuaGuaLeUserPurchaseList{
+  width: 100%;
+  height: 40px;
+  overflow: hidden;
+  position: absolute;
+  margin-top: -17px;
+  margin-left: -14px;
+  padding: 0px 17px;
+}
+
+.GuaGuaLeDetails {  
+  padding-top: 5px;
+}
+
+.GuaGuaLe-loadMore {
+  text-align: center;
+}
+
+.GuaGuaLeButton--transparent {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  padding: 6px 12px;
+  border: 1px solid #a3b0c2;
+  border-radius: 4px;
+  transition: all 150ms ease-in-out;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  white-space: nowrap;
+  outline: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.GuaGuaLeMarquee {
+  margin: 0 auto;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.GuaGuaLeMarquee span {
+  display: inline-block;
+  width: max-content;
+
+  padding-left: 100%;
+  /* show the marquee just outside the paragraph */
+  will-change: transform;
+}
+
+.GuaGuaLeMarquee span:hover {
+  animation-play-state: paused
+}
+
+
+@keyframes GuaGuaLeMarquee {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(-100%, 0); }
+}
+
+
+/* Respect user preferences about animations */
+
+@media (prefers-reduced-motion: reduce) {
+  .GuaGuaLeMarquee span {
+    animation-iteration-count: 1;
+    animation-duration: 0.01; 
+    /* instead of animation: none, so an animationend event is 
+     * still available, if previously attached.
+     */
+    width: auto;
+    padding-left: 0;
+  }
+}
