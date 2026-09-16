@@ -13,5 +13,6 @@
     "build": "webpack --mode production",
     "build:admin": "webpack --config webpack.admin.config.js --mode production",
     "build:forum-fix": "webpack --config webpack.forum-fix.config.js --mode production"
+    ,"build:forum-combined": "webpack --config webpack.forum-combined.config.js --mode production"
   }
 }
