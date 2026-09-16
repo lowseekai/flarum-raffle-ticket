@@ -2,7 +2,7 @@ const base = require('flarum-webpack-config')();
 
 module.exports = {
   ...base,
-  entry: './admin.js',
+  entry: ['./src/admin/legacy.js', './admin.js'],
   output: {
     ...base.output,
     filename: 'admin.js',
