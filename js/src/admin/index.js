@@ -1,7 +1,7 @@
 import app from 'flarum/admin/app';
 
 app.initializers.add('lowseekai/flarum-raffle-ticket', () => {
-  const registry = app.registry.for('ziven-guaguale');
+  const registry = app.registry.for('lowseekai-raffle-ticket');
 
   registry
     .registerSetting({
