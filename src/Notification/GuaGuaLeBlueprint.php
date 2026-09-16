@@ -2,35 +2,42 @@
 
 namespace Ziven\GuaGuaLe\Notification;
 
+use Flarum\Database\AbstractModel;
+use Flarum\Notification\Blueprint\BlueprintInterface;
 use Flarum\User\User;
 use Ziven\GuaGuaLe\Model\GuaGuaLePurchase;
-use Ziven\GuaGuaLe\Model\GuaGuaLe;
-use Flarum\Notification\Blueprint\BlueprintInterface;
 
-class GuaGuaLeBlueprint implements BlueprintInterface{
-    public $guagualePurchase;
+class GuaGuaLeBlueprint implements BlueprintInterface
+{
+    public GuaGuaLePurchase $guagualePurchase;
 
-    public function __construct(GuaGuaLePurchase $guagualePurchase){
+    public function __construct(GuaGuaLePurchase $guagualePurchase)
+    {
         $this->guagualePurchase = $guagualePurchase;
     }
 
-    public function getSubject(){
+    public function getSubject(): ?AbstractModel
+    {
         return $this->guagualePurchase;
     }
 
-    public function getFromUser(){
+    public function getFromUser(): ?User
+    {
         return $this->guagualePurchase->purchasedUser;
     }
 
-    public function getData(){
+    public function getData(): mixed
+    {
         return null;
     }
-    
-    public static function getType(){
+
+    public static function getType(): string
+    {
         return 'guagualePurchase';
     }
 
-    public static function getSubjectModel(){
+    public static function getSubjectModel(): string
+    {
         return GuaGuaLePurchase::class;
     }
 }
