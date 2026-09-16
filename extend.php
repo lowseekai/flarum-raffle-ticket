@@ -22,7 +22,9 @@ use Ziven\GuaGuaLe\Model\GuaGuaLe;
 use Ziven\GuaGuaLe\Notification\GuaGuaLeBlueprint;
 
 $extend = [
-    (new Extend\Frontend('admin'))->js(__DIR__.'/js/dist/admin.js')->css(__DIR__.'/less/admin.less'),
+    (new Extend\Frontend('admin'))
+        ->js(__DIR__.'/js/dist/admin.js')
+        ->css(__DIR__.'/less/admin.less'),
     (new Extend\Frontend('forum'))->js(__DIR__ . '/js/dist/forum.js')->css(__DIR__.'/less/forum.less')
         ->route('/guaguale', 'guaguale.index', GuaGuaLeIndexController::class),
 
