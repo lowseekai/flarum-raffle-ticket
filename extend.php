@@ -41,7 +41,7 @@ $extend = [
     (new Extend\Settings())
         ->serializeToForum('guagualeDisplayName', 'ziven-guaguale.guagualeDisplayName', 'strval')
         ->serializeToForum('guagualeTimeZone', 'ziven-guaguale.guagualeTimezone')
-        ->serializeToForum('pointSystemCurrencyName', 'point-system.currency_name', 'strval')
+        ->serializeToForum('pointSystem.currency_name', 'point-system.currency_name', 'strval')
         ->default('ziven-guaguale.guagualeDisplayName', 'Raffle Ticket')
         ->default('ziven-guaguale.guagualeTimezone', 'Asia/Shanghai'),
     (new Extend\Notification())
