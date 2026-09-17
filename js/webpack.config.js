@@ -5,6 +5,7 @@ module.exports = {
   entry: './src/forum-fix.js',
   output: {
     ...base.output,
+    clean: false,
     filename: 'forum.js',
   },
 };

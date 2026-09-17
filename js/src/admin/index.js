@@ -2,9 +2,8 @@ import app from 'flarum/admin/app';
 import RaffleAdminPage from './components/RaffleAdminPage';
 
 app.initializers.add('lowseekai/flarum-raffle-ticket', () => {
-  const registry = app.registry.for('lowseekai-raffle-ticket');
-
-  registry
+  const register = (extensionId) => app.registry
+    .for(extensionId)
     .registerPage(RaffleAdminPage)
     .registerSetting({
       setting: 'ziven-guaguale.guagualeDisplayName',
@@ -26,4 +25,9 @@ app.initializers.add('lowseekai/flarum-raffle-ticket', () => {
       },
       'moderate'
     );
+
+  // Flarum installations created from the original package use the legacy
+  // extension id, while newer deployments use the package-derived id.
+  register('lowseekai-raffle-ticket');
+  register('ziven-guaguale');
 });

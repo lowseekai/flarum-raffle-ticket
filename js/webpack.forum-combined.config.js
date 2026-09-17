@@ -5,6 +5,7 @@ module.exports = {
   entry: ['./dist/forum.js', './dist/forum-fix.js'],
   output: {
     ...base.output,
+    clean: false,
     filename: 'forum-combined.js',
   },
 };
