@@ -4,8 +4,9 @@ declare(strict_types=1);
 
 namespace Ziven\GuaGuaLe\Api\Resource;
 
-use Flarum\Api\Resource\AbstractResource;
+use Flarum\Api\Resource\AbstractDatabaseResource;
 use Flarum\Api\Schema;
+use Ziven\GuaGuaLe\Model\GuaGuaLePurchase;
 
 /**
  * The purchase record is used as the subject of raffle notifications.
@@ -13,11 +14,16 @@ use Flarum\Api\Schema;
  * This resource intentionally exposes no endpoints. It only gives Flarum's
  * notification resource a stable JSON:API type for the polymorphic subject.
  */
-final class GuaGuaLePurchaseResource extends AbstractResource
+final class GuaGuaLePurchaseResource extends AbstractDatabaseResource
 {
     public function type(): string
     {
         return 'guagualePurchase';
+    }
+
+    public function model(): string
+    {
+        return GuaGuaLePurchase::class;
     }
 
     public function fields(): array
