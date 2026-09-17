@@ -113,6 +113,7 @@ export default class RaffleModal extends Modal {
     return (
       <span className="RaffleModal-prize" key={prize.points}>
         {prize.points} {app.forum.attribute('pointSystem.currency_name') || 'Points'} x{prize.amount}
+        {app.translator.trans('ziven-guaguale.admin.guaguale-unit-name')}
         {removable && <button type="button" aria-label={app.translator.trans('ziven-guaguale.admin.guaguale-data-remove')} onclick={() => this.removePrize(prize.points)}>x</button>}
       </span>
     );

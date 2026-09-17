@@ -56,7 +56,7 @@ ziven-guaguale:
     management-load-error: 加载抽奖活动失败
     unallocated-tickets: "未中奖券：{count} 张"
     guaguale-allow-guaguale: 允许使用抽奖券
-    guaguale-unit-name: " 张"
+    guaguale-unit-name: "张"
     guaguale-add: 添加刮刮乐
     guaguale-add-error: 添加失败
     guaguale-edit: 编辑刮刮乐
