@@ -70,18 +70,29 @@
 .RaffleAdmin-status { padding: 2px 7px; border-radius: var(--border-radius); background: var(--control-bg); font-size: 11px; }
 .RaffleAdmin-status.is-active { background: #dff3e5; color: #246b3b; }
 
-.RaffleModal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-.RaffleModal-background select { width: 120px; flex: 0 0 auto; }
-.RaffleModal-prizeInput input { width: 140px; }
+.RaffleModal-form { text-align: center; }
+.RaffleModal-form .GuaGuaLeSettingsLabel { padding: 10px 0; text-align: left; }
+.RaffleModal-background { align-items: stretch; text-align: left; }
+.RaffleModal-background .Select { flex: 0 0 110px; }
+.RaffleModal-background .GuaGuaLeColorAndBackground { flex: 1; }
+.RaffleModal-background input { padding-right: 42px; }
+.RaffleModal-colorPreview { position: absolute; right: 8px; top: 5px; width: 26px; height: 26px; border: 1px solid var(--control-color); border-radius: var(--border-radius); }
+.RaffleModal-winChance { font-size: 12px; font-weight: normal; }
+.RaffleModal-prizeSettings { text-align: left; }
+.RaffleModal-prizeInput { flex-wrap: wrap; padding-bottom: 10px; }
+.RaffleModal-prizeInput input { width: 100px; height: 32px; }
+.RaffleModal-prizeInput .Button { min-height: 32px; padding-top: 5px; padding-bottom: 5px; }
 .RaffleModal-prizes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-.RaffleModal-prize { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--control-bg); border-radius: var(--border-radius); padding: 5px 8px; }
+.RaffleModal-prize { display: inline-flex; align-items: center; gap: 6px; border: 2px solid #33cd8f; padding: 5px; font-size: 11px; }
 .RaffleModal-prize button { border: 0; background: none; color: var(--muted-color); cursor: pointer; padding: 0; }
+.RaffleModal-controls { text-align: center; }
 
 @media (max-width: 767px) {
   .RaffleAdmin-item { grid-template-columns: 52px minmax(0, 1fr); }
   .RaffleAdmin-preview { width: 52px; }
   .RaffleAdmin-actions { grid-column: 1 / -1; }
-  .RaffleModal-grid { grid-template-columns: 1fr; }
+  .RaffleModal-background { align-items: stretch; flex-direction: column; }
+  .RaffleModal-background .Select { flex-basis: auto; }
   .RaffleModal-prizeInput { align-items: stretch; flex-direction: column; }
   .RaffleModal-prizeInput input { width: 100%; }
 }

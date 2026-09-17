@@ -52,14 +52,14 @@ ziven-guaguale:
       guaguale-win-total: "你花费了 {costTotal}，获得了 {winTotal} | 购买编号：{purchaseID}"
   admin:
     management-title: 抽奖活动管理
-    management-empty: 暂无抽奖活动，可以点击“添加抽奖活动”创建。
+    management-empty: 暂无刮刮乐，可以点击“添加刮刮乐”创建。
     management-load-error: 加载抽奖活动失败
     unallocated-tickets: "未中奖券：{count} 张"
     guaguale-allow-guaguale: 允许使用抽奖券
     guaguale-unit-name: " 张"
-    guaguale-add: 添加抽奖活动
+    guaguale-add: 添加刮刮乐
     guaguale-add-error: 添加失败
-    guaguale-edit: 编辑抽奖活动
+    guaguale-edit: 编辑刮刮乐
     guaguale-data-save: 保存
     guaguale-data-cancel: 取消
     guaguale-data-confirm: 确定
@@ -68,9 +68,9 @@ ziven-guaguale:
     guaguale-data-remove: 删除
     guaguale-data-not-enough-tickets: 抽奖券数量不足
     guaguale-data-win-price-already-exist: 该中奖积分已存在
-    guaguale-data-win-price: 中奖积分
+    guaguale-data-win-price: 金额
     guaguale-data-win-amount: 数量
-    guaguale-data-win-chance: "中奖概率：{winChance}%"
+    guaguale-data-win-chance: "（中奖几率{winChance}%）"
     guaguale-data-setting-invalid: 输入的抽奖设置无效
     settings:
       guaguale-timezone: 时区

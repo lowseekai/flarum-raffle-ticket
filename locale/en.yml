@@ -57,7 +57,7 @@ ziven-guaguale:
     unallocated-tickets: "Non-winning tickets: {count}"
     guaguale-allow-guaguale: Allow play raffle ticket
     guaguale-unit-name: " tickets"
-    guaguale-add: Add New Raffle
+    guaguale-add: Add Scratch Card
     guaguale-add-error: Add Error
     guaguale-edit: Edit Raffle
     guaguale-data-save: Save

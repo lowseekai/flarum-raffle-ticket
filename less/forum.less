@@ -127,3 +127,71 @@
     padding-left: 0;
   }
 }
+
+.RafflePage,
+.RaffleHistoryPage {
+  padding: 24px 0 48px;
+}
+
+.RafflePage-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.RafflePage-toolbar h1 {
+  margin: 0;
+  font-size: 22px;
+}
+
+.RafflePage-list {
+  display: grid;
+  gap: 14px;
+}
+
+.RafflePage .GuaGuaLeContainer {
+  height: auto;
+  min-height: 168px;
+  overflow: hidden;
+  color: #fff;
+  cursor: default;
+}
+
+.RafflePage .GuaGuaLeMask {
+  min-height: 168px;
+  background: rgba(17, 24, 39, .42);
+}
+
+.RafflePage .GuaGuaLeDescription {
+  max-width: 800px;
+  height: auto;
+  min-height: 42px;
+}
+
+.RafflePage .GuaGuaLeDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px 18px;
+  margin: 8px 0 12px;
+}
+
+.RafflePage-buy { min-width: 120px; }
+.RafflePage-empty { padding: 40px 0; color: var(--muted-color); text-align: center; }
+.RafflePurchaseModal-result { text-align: center; }
+.RafflePurchaseModal-total { margin-bottom: 15px; font-size: 18px; font-weight: 700; }
+.RafflePurchaseModal-prizes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
+.RafflePurchaseModal-prizes span { border: 1px solid var(--control-bg); border-radius: var(--border-radius); padding: 5px 8px; }
+.RaffleHistoryPage-summary { margin-bottom: 16px; border-left: 3px solid var(--primary-color); padding: 10px 12px; background: var(--control-bg); }
+.RaffleHistoryPage-tableWrap { overflow-x: auto; }
+.RaffleHistoryPage-table { width: 100%; border-collapse: collapse; }
+.RaffleHistoryPage-table th,
+.RaffleHistoryPage-table td { border-bottom: 1px solid var(--control-bg); padding: 10px; text-align: left; white-space: nowrap; }
+
+@media @phone {
+  .RafflePage,
+  .RaffleHistoryPage { padding-top: 15px; }
+  .RafflePage-toolbar { align-items: flex-start; flex-direction: column; }
+  .RafflePage .GuaGuaLeTitle { font-size: 17px; }
+}
