@@ -11,12 +11,6 @@ class ListGuaGuaLeController extends AbstractJsonApiController
     public function handle(ServerRequestInterface $request): \Psr\Http\Message\ResponseInterface
     {
         $actor = $this->actor($request);
-
-        if (! $actor->can('ziven.zivenAllowGuaGuaLe')) {
-            return $this->response([]);
-        }
-
-        $query = GuaGuaLe::query();
         $includeInactive = filter_var(
             Arr::get($request->getQueryParams(), 'includeInactive', false),
             FILTER_VALIDATE_BOOLEAN
@@ -24,7 +18,13 @@ class ListGuaGuaLeController extends AbstractJsonApiController
 
         if ($includeInactive) {
             $actor->assertAdmin();
-        } else {
+        } elseif (! $actor->can('ziven.zivenAllowGuaGuaLe')) {
+            return $this->response([]);
+        }
+
+        $query = GuaGuaLe::query();
+
+        if (! $includeInactive) {
             $query->where('activated', true);
         }
 
