@@ -51,6 +51,10 @@ ziven-guaguale:
       guaguale-open-content: "[{guagualeTitle}] {guagualePurchaseCount} tickets scratch result"
       guaguale-win-total: "You spent {costTotal} and won {winTotal} | purchase ID: {purchaseID}"
   admin:
+    management-title: Raffle Management
+    management-empty: No raffles yet. Use Add New Raffle to create one.
+    management-load-error: Failed to load raffles
+    unallocated-tickets: "Non-winning tickets: {count}"
     guaguale-allow-guaguale: Allow play raffle ticket
     guaguale-unit-name: " tickets"
     guaguale-add: Add New Raffle

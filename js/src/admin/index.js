@@ -1,9 +1,11 @@
 import app from 'flarum/admin/app';
+import RaffleAdminPage from './components/RaffleAdminPage';
 
 app.initializers.add('lowseekai/flarum-raffle-ticket', () => {
   const registry = app.registry.for('lowseekai-raffle-ticket');
 
   registry
+    .registerPage(RaffleAdminPage)
     .registerSetting({
       setting: 'ziven-guaguale.guagualeDisplayName',
       type: 'text',

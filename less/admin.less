@@ -28,3 +28,60 @@
 .guagualeButton--gray:hover {background-color:#c6c6c6;}
 .guagualeButton--gray:active {background-color:#c6c6c6;}
 .guagualeButton--gray:disabled {background-color:#eee;}
+
+.RaffleAdmin {
+  border-top: 1px solid var(--control-bg);
+  padding-top: 24px;
+}
+
+.RaffleAdmin-heading,
+.RaffleAdmin-titleLine,
+.RaffleAdmin-actions,
+.RaffleModal-background,
+.RaffleModal-prizeInput {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.RaffleAdmin-heading {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.RaffleAdmin-heading h3 { margin: 0; }
+.RaffleAdmin-list { display: grid; gap: 10px; }
+
+.RaffleAdmin-item {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 14px;
+  border: 1px solid var(--control-bg);
+  border-radius: var(--border-radius);
+  padding: 12px;
+}
+
+.RaffleAdmin-item.is-inactive { opacity: .65; }
+.RaffleAdmin-preview { width: 72px; height: 48px; border-radius: var(--border-radius); background-size: cover; background-position: center; }
+.RaffleAdmin-details { min-width: 0; }
+.RaffleAdmin-details p { margin: 5px 0; }
+.RaffleAdmin-meta { display: flex; flex-wrap: wrap; gap: 5px 16px; color: var(--muted-color); font-size: 12px; }
+.RaffleAdmin-status { padding: 2px 7px; border-radius: var(--border-radius); background: var(--control-bg); font-size: 11px; }
+.RaffleAdmin-status.is-active { background: #dff3e5; color: #246b3b; }
+
+.RaffleModal-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+.RaffleModal-background select { width: 120px; flex: 0 0 auto; }
+.RaffleModal-prizeInput input { width: 140px; }
+.RaffleModal-prizes { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.RaffleModal-prize { display: inline-flex; align-items: center; gap: 6px; border: 1px solid var(--control-bg); border-radius: var(--border-radius); padding: 5px 8px; }
+.RaffleModal-prize button { border: 0; background: none; color: var(--muted-color); cursor: pointer; padding: 0; }
+
+@media (max-width: 767px) {
+  .RaffleAdmin-item { grid-template-columns: 52px minmax(0, 1fr); }
+  .RaffleAdmin-preview { width: 52px; }
+  .RaffleAdmin-actions { grid-column: 1 / -1; }
+  .RaffleModal-grid { grid-template-columns: 1fr; }
+  .RaffleModal-prizeInput { align-items: stretch; flex-direction: column; }
+  .RaffleModal-prizeInput input { width: 100%; }
+}

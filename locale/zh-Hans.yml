@@ -51,6 +51,10 @@ ziven-guaguale:
       guaguale-open-content: "[{guagualeTitle}] {guagualePurchaseCount} 张抽奖券开奖结果"
       guaguale-win-total: "你花费了 {costTotal}，获得了 {winTotal} | 购买编号：{purchaseID}"
   admin:
+    management-title: 抽奖活动管理
+    management-empty: 暂无抽奖活动，可以点击“添加抽奖活动”创建。
+    management-load-error: 加载抽奖活动失败
+    unallocated-tickets: "未中奖券：{count} 张"
     guaguale-allow-guaguale: 允许使用抽奖券
     guaguale-unit-name: " 张"
     guaguale-add: 添加抽奖活动

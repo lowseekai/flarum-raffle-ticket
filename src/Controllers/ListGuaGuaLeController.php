@@ -4,6 +4,7 @@ namespace Ziven\GuaGuaLe\Controllers;
 
 use Ziven\GuaGuaLe\Model\GuaGuaLe;
 use Psr\Http\Message\ServerRequestInterface;
+use Illuminate\Support\Arr;
 
 class ListGuaGuaLeController extends AbstractJsonApiController
 {
@@ -15,8 +16,19 @@ class ListGuaGuaLeController extends AbstractJsonApiController
             return $this->response([]);
         }
 
-        $raffles = GuaGuaLe::query()
-            ->where('activated', true)
+        $query = GuaGuaLe::query();
+        $includeInactive = filter_var(
+            Arr::get($request->getQueryParams(), 'includeInactive', false),
+            FILTER_VALIDATE_BOOLEAN
+        );
+
+        if ($includeInactive) {
+            $actor->assertAdmin();
+        } else {
+            $query->where('activated', true);
+        }
+
+        $raffles = $query
             ->orderByDesc('id')
             ->get()
             ->map(fn (GuaGuaLe $raffle) => $this->raffleResource($raffle))
