@@ -72,10 +72,27 @@
 
 .RaffleModal-form { text-align: center; }
 .RaffleModal-form .GuaGuaLeSettingsLabel { padding: 10px 0; text-align: left; }
-.RaffleModal-background { align-items: stretch; text-align: left; }
-.RaffleModal-background .Select { flex: 0 0 110px; }
-.RaffleModal-background .GuaGuaLeColorAndBackground { flex: 1; }
-.RaffleModal-background input { padding-right: 42px; }
+.RaffleModal-background {
+  align-items: stretch;
+  width: 100%;
+  text-align: left;
+}
+.RaffleModal-background .Select {
+  flex: 0 0 110px;
+  width: 110px;
+}
+.RaffleModal-background .Select-input { width: 100%; }
+.RaffleModal-background .GuaGuaLeColorAndBackground {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+.RaffleModal-background .GuaGuaLeColorAndBackground input {
+  flex: 1 1 auto;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  padding-right: 42px;
+}
 .RaffleModal-colorPreview { position: absolute; right: 8px; top: 5px; width: 26px; height: 26px; border: 1px solid var(--control-color); border-radius: var(--border-radius); }
 .RaffleModal-winChance { font-size: 12px; font-weight: normal; }
 .RaffleModal-prizeSettings { text-align: left; }
@@ -92,7 +109,7 @@
   .RaffleAdmin-preview { width: 52px; }
   .RaffleAdmin-actions { grid-column: 1 / -1; }
   .RaffleModal-background { align-items: stretch; flex-direction: column; }
-  .RaffleModal-background .Select { flex-basis: auto; }
+  .RaffleModal-background .Select { flex-basis: auto; width: 100%; }
   .RaffleModal-prizeInput { align-items: stretch; flex-direction: column; }
   .RaffleModal-prizeInput input { width: 100%; }
 }
