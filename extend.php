@@ -34,6 +34,7 @@ $extend = [
     (new Extend\Routes('api'))
         ->get('/guagualeList', 'guaguale.get', ListGuaGuaLeController::class)
         ->post('/guagualeList', 'guaguale.add', GuaGuaLeAddController::class)
+        ->delete('/guagualeList/{id}', 'guaguale.delete', GuaGuaLeUpdateController::class)
         ->get('/guagualePurchaseCount', 'guaguale.purchaseCount',GuaGuaLePurchaseCountController::class)
         ->get('/guagualePurchaseList', 'guaguale.details',GuaGuaLePurchaseListController::class)
         ->post('/guagualePurchase', 'guaguale.purchase', GuaGuaLePurchaseController::class)

@@ -71,11 +71,9 @@ export default class RaffleAdminPage extends ExtensionPage {
           <Button className="Button" icon="fas fa-pen" disabled={busy} onclick={() => this.openModal(raffle)}>
             {app.translator.trans('ziven-guaguale.admin.settings.guaguale-item-edit')}
           </Button>
-          {raffle.activated && (
-            <Button className="Button Button--danger" icon="fas fa-trash" loading={busy} onclick={() => this.deactivate(raffle)}>
-              {app.translator.trans('ziven-guaguale.admin.settings.guaguale-item-delete')}
-            </Button>
-          )}
+          <Button className="Button Button--danger" icon="fas fa-trash" loading={busy} onclick={() => this.delete(raffle)}>
+            {app.translator.trans('ziven-guaguale.admin.settings.guaguale-item-delete')}
+          </Button>
         </div>
       </div>
     );
@@ -114,15 +112,14 @@ export default class RaffleAdminPage extends ExtensionPage {
     });
   }
 
-  async deactivate(raffle) {
+  async delete(raffle) {
     if (!confirm(app.translator.trans('ziven-guaguale.admin.settings.guaguale-item-delete-confirmation'))) return;
 
     this.savingRaffle = raffle.id;
     try {
       await app.request({
-        method: 'PATCH',
+        method: 'DELETE',
         url: this.apiUrl(`/guagualeList/${raffle.id}`),
-        body: { data: { attributes: { activated: false } } },
       });
       await this.loadRaffles();
     } catch (error) {
