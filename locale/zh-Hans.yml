@@ -72,6 +72,9 @@ ziven-guaguale:
     guaguale-data-win-amount: 数量
     guaguale-data-win-chance: "（中奖几率{winChance}%）"
     guaguale-data-setting-invalid: 输入的抽奖设置无效
+    guaguale-form-cost: 花费/张
+    guaguale-form-limit: 用户购买上限（0代表无限制）
+    guaguale-form-color-background: "背景颜色/背景图片 (选填，留空则使用随机颜色)"
     settings:
       guaguale-timezone: 时区
       guaguale-timezone-help: 设置购买时间使用的时区，默认为 Asia/Shanghai

@@ -40,11 +40,11 @@ export default class RaffleModal extends Modal {
           <div className="Form-group RaffleModal-form">
             {this.field('guaguale-item-title', <input required maxlength="255" className="FormControl" value={this.titleValue} oninput={(e) => (this.titleValue = e.target.value)} />)}
             {this.field('guaguale-item-desc', <textarea required maxlength="255" className="FormControl" value={this.description} oninput={(e) => (this.description = e.target.value)} />)}
-            {this.field('guaguale-item-cost', <input required type="number" min="1" step="1" className="FormControl" value={this.cost} oninput={(e) => (this.cost = e.target.value)} />)}
+            {this.field('guaguale-item-cost', <input required type="number" min="1" step="1" className="FormControl" value={this.cost} oninput={(e) => (this.cost = e.target.value)} />, 'ziven-guaguale.admin.guaguale-form-cost')}
             {this.field('guaguale-item-amount', <input required disabled={this.editing} type="number" min="1" step="1" className="FormControl" value={this.amount} oninput={(e) => (this.amount = e.target.value)} />)}
-            {this.field('guaguale-item-limit', <input required type="number" min="0" step="1" className="FormControl" value={this.limit} oninput={(e) => (this.limit = e.target.value)} />)}
+            {this.field('guaguale-item-limit', <input required type="number" min="0" step="1" className="FormControl" value={this.limit} oninput={(e) => (this.limit = e.target.value)} />, 'ziven-guaguale.admin.guaguale-form-limit')}
 
-            <div className="GuaGuaLeSettingsLabel">{app.translator.trans('ziven-guaguale.admin.settings.guaguale-item-color-background')}</div>
+            <div className="GuaGuaLeSettingsLabel">{app.translator.trans('ziven-guaguale.admin.guaguale-form-color-background')}</div>
             <div className="RaffleModal-background">
               <span className="Select">
                 <select className="Select-input FormControl" value={this.backgroundType} onchange={(e) => (this.backgroundType = e.target.value)}>
@@ -101,9 +101,9 @@ export default class RaffleModal extends Modal {
     );
   }
 
-  field(key, control) {
+  field(key, control, labelKey = `ziven-guaguale.admin.settings.${key}`) {
     return [
-      <div className="GuaGuaLeSettingsLabel">{app.translator.trans(`ziven-guaguale.admin.settings.${key}`)}</div>,
+      <div className="GuaGuaLeSettingsLabel">{app.translator.trans(labelKey)}</div>,
       control,
     ];
   }

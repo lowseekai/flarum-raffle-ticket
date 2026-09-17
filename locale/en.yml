@@ -72,6 +72,9 @@ ziven-guaguale:
     guaguale-data-win-amount: Amount
     guaguale-data-win-chance: "(Win chance: {winChance}%)"
     guaguale-data-setting-invalid: Your input value is invalid
+    guaguale-form-cost: Cost/ticket
+    guaguale-form-limit: User purchase limit (0 means unlimited)
+    guaguale-form-color-background: Background color/image (optional; random color when empty)
     settings:
       guaguale-timezone: Timezone
       guaguale-timezone-help: Set the timezone for the transfer time. Default is "Asia/Shanghai"
