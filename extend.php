@@ -19,6 +19,7 @@ use Ziven\GuaGuaLe\Controllers\GuaGuaLeAddController;
 
 use Ziven\GuaGuaLe\Model\GuaGuaLePurchase;
 use Ziven\GuaGuaLe\Model\GuaGuaLe;
+use Ziven\GuaGuaLe\Api\Resource\GuaGuaLePurchaseResource;
 use Ziven\GuaGuaLe\Notification\GuaGuaLeBlueprint;
 
 $extend = [
@@ -50,6 +51,7 @@ $extend = [
         ->default('ziven-guaguale.guagualeTimezone', 'Asia/Shanghai'),
     (new Extend\Notification())
         ->type(GuaGuaLeBlueprint::class, ['alert']),
+    (new Extend\ApiResource(GuaGuaLePurchaseResource::class)),
 
     (new Extend\ApiResource(ForumResource::class))
         ->fields(fn () => [
