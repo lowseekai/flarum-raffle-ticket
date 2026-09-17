@@ -81,8 +81,7 @@ export default class RaffleModal extends Modal {
                   </Button>
                 </div>
                 <div className="RaffleModal-prizes">
-                  {this.prizeTag({ points: 0, amount: losing }, false)}
-                  {this.prizes.map((prize) => this.prizeTag(prize, true))}
+                  {[{ points: 0, amount: losing }, ...this.prizes].map((prize) => this.prizeTag(prize, prize.points !== 0))}
                 </div>
               </div>
             )}
