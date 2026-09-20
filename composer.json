@@ -5,7 +5,7 @@
     "license": "proprietary",
     "require": {
         "flarum/core": "^2.0.0-rc.8",
-        "ramon/point-system": "^2.0"
+        "ramon/point-system": "^2.0 || dev-main"
     },
     "support": {
         "issues": "https://github.com/lowseekai/flarum-raffle-ticket/issues",
