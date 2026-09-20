@@ -37,6 +37,9 @@ ziven-guaguale:
     guaguale-history-list-open-result: Open Result
     guaguale-scratch-it: Scratch It
     guaguale-scratch-result: "Scratch result: gained {money} points"
+    guaguale-scratch-hint: Scratch to reveal the result
+    guaguale-scratch-instruction: Scratch the card above to reveal the result
+    guaguale-opening: Opening result...
     guaguale-close: Close
     guaguale-receive-open-result: Opened a raffle ticket
     guaguale-purchased-user: "{purchaseUserName} bought {purchaseCount} tickets and won {purchaseWinTotal}"
@@ -47,6 +50,16 @@ ziven-guaguale:
     purchase-error: Purchase Error
     purchase-error-insufficient-fund: Insufficient points
     purchase-error-not-enough-tickets: Don't have enough tickets
+    guaguale-available-label: Remaining
+    guaguale-limit-label: Purchase limit
+    guaguale-purchased-label: Purchased
+    guaguale-unlimited: Unlimited
+    guaguale-price-label: Price per ticket
+    guaguale-payment-total: Total to pay
+    guaguale-history-entry-count: "Quantity: {count} tickets"
+    guaguale-history-entry-cost: "Cost: {cost} {currency}"
+    guaguale-history-entry-time: "Purchase time: {time}"
+    guaguale-history-entry-win: "Result: {win} {currency}"
     notifications:
       guaguale-open-content: "[{guagualeTitle}] {guagualePurchaseCount} tickets scratch result"
       guaguale-win-total: "You spent {costTotal} and won {winTotal} | purchase ID: {purchaseID}"

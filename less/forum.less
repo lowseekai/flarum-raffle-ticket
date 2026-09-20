@@ -183,6 +183,95 @@
 .RafflePurchaseModal-total { margin-bottom: 15px; font-size: 18px; font-weight: 700; }
 .RafflePurchaseModal-prizes { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 18px; }
 .RafflePurchaseModal-prizes span { border: 1px solid var(--control-bg); border-radius: var(--border-radius); padding: 5px 8px; }
+.RafflePurchaseModal-facts,
+.RafflePurchaseModal-payment {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.RafflePurchaseModal-facts > div,
+.RafflePurchaseModal-payment > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.RafflePurchaseModal-facts span,
+.RafflePurchaseModal-payment span { color: var(--muted-color); }
+.RafflePurchaseModal-payment {
+  border-top: 1px solid var(--control-bg);
+  padding-top: 14px;
+}
+.RafflePurchaseModal-payment .is-total strong { color: var(--primary-color); font-size: 16px; }
+.RafflePurchaseModal-result .Form-controls { margin-top: 18px; }
+.RafflePurchaseModal-opening { margin-top: 10px; color: var(--muted-color); }
+
+.GuaGuaLeScratchCard {
+  position: relative;
+  width: 315px;
+  max-width: 100%;
+  height: 105px;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 2px dotted var(--muted-color);
+  border-radius: var(--border-radius);
+  background: var(--body-bg);
+  user-select: none;
+}
+.GuaGuaLeScratchCard-result {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding: 6px 10px;
+  text-align: center;
+}
+.GuaGuaLeScratchCard-total { color: #d33; font-weight: 700; }
+.GuaGuaLeScratchCard-prizes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-height: 56px;
+  overflow-y: auto;
+  font-size: 11px;
+}
+.GuaGuaLeScratchCard-prizes span {
+  display: inline-block;
+  border: 2px solid #33cd8f;
+  padding: 4px 6px;
+}
+.GuaGuaLeScratchCard-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  touch-action: none;
+  cursor: crosshair;
+}
+.RaffleHistoryList-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+.RaffleHistoryList-header h2 { margin: 0; font-size: 22px; }
+.RaffleHistoryList-items { margin: 0; padding: 0; list-style: none; }
+.RaffleHistoryList-items .guagualeHistoryContainer { margin-bottom: 10px; }
+.RaffleHistoryList-primary,
+.RaffleHistoryList-meta,
+.RaffleHistoryList-result { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 14px; }
+.RaffleHistoryList-primary { margin-bottom: 7px; }
+.RaffleHistoryList-primary > span { font-weight: 600; }
+.RaffleHistoryList-meta { color: var(--muted-color); font-size: 13px; }
+.RaffleHistoryList-result { margin-top: 8px; }
+.RaffleHistoryList-result .GuaGuaLeButton--transparent { margin: 0; padding: 3px 8px; }
+.RaffleHistoryList-loadMore { padding: 16px 0; text-align: center; }
 .RaffleHistoryPage-summary { margin-bottom: 16px; border-left: 3px solid var(--primary-color); padding: 10px 12px; background: var(--control-bg); }
 .RaffleHistoryPage-tableWrap { overflow-x: auto; }
 .RaffleHistoryPage-table { width: 100%; border-collapse: collapse; }
@@ -194,4 +283,7 @@
   .RaffleHistoryPage { padding-top: 15px; }
   .RafflePage-toolbar { align-items: flex-start; flex-direction: column; }
   .RafflePage .GuaGuaLeTitle { font-size: 17px; }
+  .RaffleHistoryList-header { align-items: flex-start; }
+  .RaffleHistoryList-header h2 { font-size: 19px; }
+  .GuaGuaLeScratchCard { width: min(315px, 100%); }
 }
